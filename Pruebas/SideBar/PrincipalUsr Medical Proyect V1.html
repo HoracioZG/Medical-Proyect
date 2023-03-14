@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Boxicns CDN Link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Principal Medical Proyect V1.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../Imagenes/MedicalP2.png">
+    <title>Medical Proyect</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <a href="">
+                <div class="imglog">
+                    <img src="../../Imagenes/image.png" alt="">
+                </div>
+            </a>
+            <span class="logo_name">Medical &nbsp&nbsp&nbsp&nbsp&nbsp&nbspProyect</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-calendar'></i>
+                    <span class="link_name">Calendario</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li>
+                        <a class="link_name" href="#">Calendario</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-links">
+                    <a href="#">
+                        <i class='bx bx-plus-medical'></i>
+                        <span class="link_name">
+                            Seguimiento
+                        </span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow' ></i>
+                </div>
+                <ul class="sub-menu">
+                    <li>
+                        <a class="link_name" href="#">Seguimiento</a>
+                        <a href="#">Tratamiento</a>
+                        <a href="#">Receta Medica</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-chat' ></i>
+                    <span class="link_name">Mensajes</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li>
+                        <a class="link_name" href="#">Mensajes</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-message-alt-minus' ></i>
+                    <span class="link_name">Notificaciones</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li>
+                        <a class="link_name" href="#">Notificaciones</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user-circle'></i>
+                    <span class="link_name">Perfil</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li>
+                        <a class="link_name" href="#">Perfil</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link_name">Configuración</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li>
+                        <a class="link_name" href="#">Configuración</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+        <div class="profile-details">
+            <div class="profile-content">
+                <a href="#">
+                    <img src="../../Imagenes/🪐.png" alt="profile">
+                </a>
+            </div>
+            <div class="name-job">
+                <div class="profile_name">Tailer-Morgan</div>
+                <div class="job">Web Desginer</div>
+            </div>
+            <i class='bx bx-log-out'></i>
+        </div>
+    </li>
+    </ul>
+        </div>
+
+        <section class="home-section">
+            <div class="home-content">
+                <i class='bx bx-menu' ></i>
+            </div>
+            <iframe src="../Login Medical Proyect V1.html" class="Frame" frameborder="0" ></iframe>
+        </section>
+
+    
+
+        <script>
+
+        let arrow = document.querySelectorAll(".arrow");
+        console.log(arrow);
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e)=>{
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("showMenu");
+            });
+        } 
+
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("close");
+        });
+
+        </script>
+</body>
+</html>

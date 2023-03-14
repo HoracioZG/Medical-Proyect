@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Funcity;
+    src: url(Fuentes/funcityfont.otf);
+}
+
+@font-face {
+    font-family: Lekton;
+    src: url(Fuentes/lekton005_l.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lekton';
+}
+
+body{
+    overflow: hidden;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #06355F, black);
+}
+section .color{
+    position: absolute;
+    filter: blur(150px);
+    animation: animus 10s linear infinite;
+}
+section .color:nth-child(1){
+    top: 50px;
+    width: 20%;
+    height: 20%;
+    background: #00B9D8;
+}
+
+section .color:nth-child(2){
+    bottom: 50px;
+    width: 20%;
+    height: 20%;
+    background: #533F8A;
+}
+
+@keyframes animus{
+    0%,100%
+    {
+        transform: translateX(-40%);
+    }
+    50%
+    {
+        transform: translateX(40%);
+    }
+}

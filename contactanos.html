@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Contáctanos</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilos_contac.css">
+        <link rel="shortcut icon" href="Imagenes/MedicalP2.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="" method="post">
+        <section>
+            <div class="container">
+                <h2>Contáctanos</h2>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="nombre_usuario" id="nombre_usuario" required="required">
+                        <span class="text">Nombre de usuario</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="nombre_completo" id="nombre_completo" required="required">
+                        <span class="text">Nombre completo</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="correo" id="correo" required="required">
+                        <span class="text">Correo electrónico</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="telefono" id="telefono" required="required">
+                        <span class="text">Teléfono</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox textarea">
+                        <input type="text" name="contacto" id="contacto" required="required">
+                        <span class="text">Escribe aquí lo que debemos saber</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row100">
+                <div class="col">
+                    <input type="submit" name="enviar" value="Enviar" id="enviar">
+                </div>
+            </div>
+        </div>
+        </section>
+    </form>
+    <script>
+        const btnEnviar = document.getElementById('enviar');
+        btnEnviar.addEventListener("click", function(e){
+            e.preventDefault();
+            const nombre_usuario = document.getElementById("nombre_usuario").value;
+            const nombre_completo = document.getElementById("nombre_completo").value;
+            const telefono = document.getElementById("telefono").value;
+            const correo = document.getElementById("correo").value;
+            const contacto = document.getElementById("contacto").value;
+            window.location.href='mailto:companynextech@gmail.com?subject=EnviodesdeFormulario&body=Nombre%20de%20usuario%3A%20${nombre_usuario}%0ANombre%20completo%3A%20${nombre_completo}%0ACorreo%20electronico%3A%20${correo}%0ATelefono%3A%20${telefono}%0AMensaje%3A%20${contacto}';
+        });
+    </script>
+    </body>
+</html>
